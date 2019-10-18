@@ -15,17 +15,17 @@ public class FamilyTreePrinter {
     public void printFamilyTree(){
         System.out.println("--- Familytree program ----");
 
-        //Fotini
+        //Fotini has cat with name Psonia
         Person fotini = new Person("Fotini", "Pashidou", false, 22); //instantiation (use of the constructor)
         fotini.setGender(1);
         System.out.println("Person1: "+ fotini);
 
-        // Damianos
+        // Damianos has 2 dogs with names Raf and Pat
         Person damianos = new Person("Damianos", "Christakis", false, 26);
         damianos.setGender(0);
         System.out.println("Person2: "+ damianos);
 
-        // Fictief mama
+        // Fictief mama - has no animals
         Person fitctionMama = new Person("Rita", "Berdemeni", true, 60);
         fitctionMama.setGender(1);
         System.out.println("FictionMaaam: "+ fitctionMama);
