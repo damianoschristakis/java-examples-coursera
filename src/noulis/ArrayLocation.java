@@ -1,4 +1,4 @@
-package com.t1t.examples;
+package noulis;
 
 public class ArrayLocation {
     private double coords[];

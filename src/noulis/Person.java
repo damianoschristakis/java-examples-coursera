@@ -6,16 +6,21 @@ public class Person {
     private boolean married;
     private int age;
     private int gender; //0 = masculin; 1 = feminin
+    private static final double PI_VALUE = 3.14; //constant
+    private static int random; //variable
 
-    public Person(String firstname) {
-        this.setFirstname(firstname);
-    }
+    public Person(String firstname) { this.setFirstname(firstname); }
 
     public Person(String firstname, String lastname, boolean married, int age) {
         this.setFirstname(firstname);
         this.setLastname(lastname);
         this.setMarried(married);
         this.setAge(age);
+    }
+
+    public static final String version(){
+        random = 5;
+        return "version 1.0, with PI defined: "+PI_VALUE;
     }
 
     public String getFirstname() {
