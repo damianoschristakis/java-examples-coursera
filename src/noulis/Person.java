@@ -6,6 +6,8 @@ public class Person {
     private boolean married;
     private int age;
     private int gender; //0 = masculin; 1 = feminin
+    // animals owned by person
+    private Animal pets;
     private static final double PI_VALUE = 3.14; //constant
     private static int random; //variable
 
@@ -63,12 +65,24 @@ public class Person {
         this.gender = gender;
     }
 
+    public Animal[] getPets() {
+        return pets;
+    }
+
+    public void setPets(Animal[] pets) {
+        this.pets = pets;
+    }
+
     //override toString method
 
 
     @Override
     public String toString() {
         // if (gender == 0) then "Mr." else "Miss." -> syntactic sugaring
-        return ((this.gender == 0)? "Mr. ": ((this.married == true)? "Mme. ":"Miss. ")) + this.getFirstname() + " " + this.getLastname() + " - age: " + this.getAge() + " - is married: " + this.isMarried();
+        String output = ((this.gender == 0)? "Mr. ": ((this.married == true)? "Mme. ":"Miss. ")) + this.getFirstname() + " " + this.getLastname() + " - age: " + this.getAge() + " - is married: " + this.isMarried() + " - has "+ pets.length + " animals";
+        for (Animal pet : this.pets) {
+            output = output.concat("\n "+ pet);
+        }
+        return output;
     }
 }
