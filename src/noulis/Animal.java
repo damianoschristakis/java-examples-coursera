@@ -1,17 +1,22 @@
 package noulis;
 
-public class Animal {
-    String name;
+abstract class Animal {
+    // Properties
+    private String name;
 
-    public Animal(String name) {
-        this.name = name;
-    }
+    // Methods
+    abstract String drink();
+    abstract String fart();
 
-    public String getName() {
-        return name;
-    }
+    // public => accessible in all your packages
+    // private => only accessible in your root package
+    // protected => only accessible in your inherited classes in your package
+    protected String getName() { return name; }
+    protected void setName(String name) { this.name = name; }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {
+        return "I'm an animal and my name is: " + name + " and when I fart: " + this.fart();
     }
 }
+
