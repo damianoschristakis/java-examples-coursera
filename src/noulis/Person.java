@@ -7,7 +7,7 @@ public class Person {
     private int age;
     private int gender; //0 = masculin; 1 = feminin
     // animals owned by person
-    private Animal pets;
+    private Animal pets [];
     private static final double PI_VALUE = 3.14; //constant
     private static int random; //variable
 
