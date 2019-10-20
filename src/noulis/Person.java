@@ -1,5 +1,7 @@
 package noulis;
 
+import java.util.List;
+
 public class Person {
     private String firstname;
     private String lastname;
@@ -7,7 +9,7 @@ public class Person {
     private int age;
     private int gender; //0 = masculin; 1 = feminin
     // animals owned by person
-    private Animal pets [];
+    private List<Animal> pets;
     private static final double PI_VALUE = 3.14; //constant
     private static int random; //variable
 
@@ -65,21 +67,21 @@ public class Person {
         this.gender = gender;
     }
 
-    public Animal[] getPets() {
+    public List<Animal> getPets() {
         return pets;
     }
 
-    public void setPets(Animal[] pets) {
+    public void setPets(List<Animal> pets) {
         this.pets = pets;
     }
 
-    //override toString method
+//override toString method
 
 
     @Override
     public String toString() {
         // if (gender == 0) then "Mr." else "Miss." -> syntactic sugaring
-        String output = ((this.gender == 0)? "Mr. ": ((this.married == true)? "Mme. ":"Miss. ")) + this.getFirstname() + " " + this.getLastname() + " - age: " + this.getAge() + " - is married: " + this.isMarried() + " - has "+ pets.length + " animals";
+        String output = ((this.gender == 0)? "Mr. ": ((this.married == true)? "Mme. ":"Miss. ")) + this.getFirstname() + " " + this.getLastname() + " - age: " + this.getAge() + " - is married: " + this.isMarried() + " - has "+ pets.size() + " animals";
         for (Animal pet : this.pets) {
             output = output.concat("\n "+ pet);
         }
