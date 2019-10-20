@@ -1,5 +1,8 @@
 package noulis;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FamilyTreePrinter<species> {
 
     // Execution terminal
@@ -20,8 +23,9 @@ public class FamilyTreePrinter<species> {
         Person fotini = new Person("Fotini", "Pashidou", false, 22); //instantiation (use of the constructor)
         fotini.setGender(1);
         Cat psonia = new Cat("psonia");
-        Animal fotiniPets [] = {psonia};
-        fotini.setPets(fotiniPets);
+        List<Animal> fotiniPetList = new ArrayList<Animal>();
+        fotiniPetList.add(psonia);
+        fotini.setPets(fotiniPetList);
         System.out.println("Fotini summary: "+fotini);
 
 
@@ -29,8 +33,10 @@ public class FamilyTreePrinter<species> {
         damianos.setGender(0);
         Dog raf = new Dog("Raf");
         Cat minou = new Cat("Minou");
-        Animal noulisPets [] = {raf, minou};
-        damianos.setPets(noulisPets);
+        List<Animal> noulisPetList = new ArrayList<>();
+        noulisPetList.add(raf);
+        noulisPetList.add(minou);
+        damianos.setPets(noulisPetList);
         System.out.println("Damianos summary: "+ damianos);
 
 
