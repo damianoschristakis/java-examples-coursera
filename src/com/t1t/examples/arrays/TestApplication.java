@@ -1,4 +1,4 @@
-package com.t1t.examples;
+package com.t1t.examples.arrays;
 
 public class TestApplication {
 
