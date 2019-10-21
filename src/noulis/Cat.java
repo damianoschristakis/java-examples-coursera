@@ -3,9 +3,8 @@ package noulis;
 public class Cat extends Animal {
     private boolean isDivaCat;
 
-    public Cat(String name) {
-        super.setName(name);
-        isDivaCat = true;
+    public Cat(String name) { super.setName(name);
+    isDivaCat = true;
     }
 
     @Override
