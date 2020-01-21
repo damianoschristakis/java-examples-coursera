@@ -35,7 +35,7 @@ abstract class Building {
     @Override
     public String toString() {
         String output = "Construction year: " + this.constructionYear +"\n";
-        // output = ouput + " "
+        // output = output + " "
         output += "Has security: " + this.hasSecurity+"\n";
         output += "Garage summary: " + ((this.garageDescriptor==null)? "No garage": this.garageDescriptor) +"\n";
         return output;
